@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			html, body {
+				height: 100%;
+			}
+
+			html {
+				display: table;
+				margin: auto;
+			}
+
+			body {
+				background-color: black;
+				display: table-cell;
+				vertical-align: middle;
+
+				animation-name: background;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes background {
+				0% {background-color: beige;}
+				50% {background-color: bisque;}
+				100% {background-color: beige;}
+			}
+
+			img {
+				animation-name: baby;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+
+			@keyframes baby {
+				0% {
+					rotate: 0deg;
+					margin-left: 100px;
+				}
+
+				50% {
+					rotate: 360deg;
+					margin-right: 200px;
+				}
+
+				100% {
+					rotate: 0deg;
+					margin-left: 100px;
+				}
+			}
+		</style>
+		<link rel="icon" href="/img/baby.png">
+		<title>hi 👶</title>
+	</head>
+
+	<body>
+		<script>
+			var sfx = new Audio("sfx/hi.ogg");
+			sfx.volume = 0.2;
+		</script>
+
+		<img onclick="sfx.play()" src="img/baby.png" width="200px"/>
+	</body>
+</html>
